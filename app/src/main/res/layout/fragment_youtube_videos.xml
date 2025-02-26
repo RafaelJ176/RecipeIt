@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.YouTubeVideosFragment"
+    tools:context=".ui.fragments.YouTubeVideosFragment"
     android:background="@drawable/btn"
     >
 

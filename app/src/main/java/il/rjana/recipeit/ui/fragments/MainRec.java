@@ -1,4 +1,4 @@
-package il.rjana.recipeit.ui;
+package il.rjana.recipeit.ui.fragments;
 
 import android.content.Context;
 import android.net.ConnectivityManager;

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".ui.Search_Rec"
+    tools:context=".ui.fragments.Search_Rec"
     android:background="@drawable/btn"
     >
 

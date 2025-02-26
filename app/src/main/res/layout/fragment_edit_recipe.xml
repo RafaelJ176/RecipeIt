@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/btn"
-    tools:context=".ui.EditRecipeFragment">
+    tools:context=".ui.fragments.EditRecipeFragment">
 
     <LinearLayout
         android:layout_width="match_parent"

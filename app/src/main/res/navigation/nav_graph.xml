@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainRec"
-        android:name="il.rjana.recipeit.ui.MainRec"
+        android:name="il.rjana.recipeit.ui.fragments.MainRec"
         android:label="fragment_main_rec"
         tools:layout="@layout/fragment_main_rec">
         <action
@@ -34,7 +34,7 @@
 
     <fragment
         android:id="@+id/search_Rec"
-        android:name="il.rjana.recipeit.ui.Search_Rec"
+        android:name="il.rjana.recipeit.ui.fragments.Search_Rec"
         android:label="fragment_search_rec"
         tools:layout="@layout/fragment_search_rec">
         <action
@@ -46,7 +46,7 @@
 
     <fragment
         android:id="@+id/myrec"
-        android:name="il.rjana.recipeit.ui.Myrec"
+        android:name="il.rjana.recipeit.ui.fragments.Myrec"
         android:label="fragment_myrec"
         tools:layout="@layout/fragment_myrec">
         <action
@@ -63,7 +63,7 @@
 
     <fragment
         android:id="@+id/recipeDetailFragment"
-        android:name="il.rjana.recipeit.ui.RecipeDetailFragment"
+        android:name="il.rjana.recipeit.ui.fragments.RecipeDetailFragment"
         android:label="fragment_recipe_detail"
         tools:layout="@layout/fragment_recipe_detail">
         <argument
@@ -73,13 +73,13 @@
 
     <fragment
         android:id="@+id/youTubeVideosFragment"
-        android:name="il.rjana.recipeit.ui.YouTubeVideosFragment"
+        android:name="il.rjana.recipeit.ui.fragments.YouTubeVideosFragment"
         android:label="fragment_youtube_videos"
         tools:layout="@layout/fragment_youtube_videos" />
         
     <fragment
         android:id="@+id/savedRecipesFragment"
-        android:name="il.rjana.recipeit.ui.SavedRecipesFragment"
+        android:name="il.rjana.recipeit.ui.fragments.SavedRecipesFragment"
         android:label="fragment_saved_recipes"
         tools:layout="@layout/fragment_saved_recipes">
         <action
@@ -96,7 +96,7 @@
     
     <fragment
         android:id="@+id/editRecipeFragment"
-        android:name="il.rjana.recipeit.ui.EditRecipeFragment"
+        android:name="il.rjana.recipeit.ui.fragments.EditRecipeFragment"
         android:label="fragment_edit_recipe"
         tools:layout="@layout/fragment_edit_recipe">
         <argument

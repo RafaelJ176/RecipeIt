@@ -1,4 +1,4 @@
-package il.rjana.recipeit.ui;
+package il.rjana.recipeit.ui.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,7 +12,6 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import com.bumptech.glide.Glide;
 import il.rjana.recipeit.R;
-import il.rjana.recipeit.model.RecipeEntity;
 import il.rjana.recipeit.viewmodel.RecipeViewModel;
 
 public class RecipeDetailsFragment extends Fragment {

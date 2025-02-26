@@ -1,4 +1,4 @@
-package il.rjana.recipeit.ui;
+package il.rjana.recipeit.ui.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
