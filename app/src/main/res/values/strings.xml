@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RecipeIt</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    
+    <!-- Main Menu -->
+    <string name="search_recipes">Search Recipes</string>
+    <string name="create_recipe">Create Recipe</string>
+    <string name="saved_recipes">Saved Recipes</string>
+    <string name="youtube_videos">YouTube Videos</string>
+    
+    <!-- Recipe Creation -->
+    <string name="create_new_recipe">Create New Recipe</string>
+    <string name="recipe_title">Recipe Title</string>
+    <string name="recipe_category">Category</string>
+    <string name="recipe_area">Cuisine (Area)</string>
+    <string name="recipe_ingredients">Ingredients</string>
+    <string name="recipe_instructions">Instructions</string>
+    <string name="add_image">Add Image</string>
+    <string name="save_recipe">Save Recipe</string>
+    <string name="title_required">Title is required</string>
+    <string name="recipe_saved">Recipe saved successfully</string>
+    <string name="title_invalid">Title can only contain letters, numbers and spaces</string>
+    
+    <!-- Image Selection -->
+    <string name="add_recipe_image">Add Recipe Image</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="choose_gallery">Choose from Gallery</string>
+    <string name="camera_permission_required">Camera permission is required to take photos</string>
+    <string name="storage_permission_required">Storage permission is required to select images</string>
+    <string name="no_camera_app">No camera app available</string>
+    <string name="failed_load_image">Failed to load image</string>
+    
+    <!-- Recipe Search -->
+    <string name="search">Search</string>
+    <string name="search_hint">Enter recipe name</string>
+    <string name="no_recipes_found">No recipes found</string>
+    <string name="location_suggestion">Would you like to see recipes from your region?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="location_permission_required">Location permission is required for regional recipes</string>
+    <string name="filter_by">Filter by</string>
+    <string name="region">Region</string>
+    <string name="category">Category</string>
+    <string name="ingredient">Ingredient</string>
+    <string name="select_ingredient">Select Ingredient</string>
+    <string name="clear_filters">Clear Filters</string>
+    <string name="results">Results</string>
+    <string name="all">All</string>
+    
+    <!-- Recipe Details -->
+    <string name="category_label">Category: %s</string>
+    <string name="area_label">Area: %s</string>
+    <string name="ingredients_label">Ingredients</string>
+    <string name="instructions_label">Instructions</string>
+    
+    <!-- Saved Recipes -->
+    <string name="my_favorite_recipes">My Favorite Recipes</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="confirm_delete">Are you sure you want to delete this recipe?</string>
+    <string name="cancel">Cancel</string>
+    <string name="recipe_deleted">Recipe deleted</string>
+    
+    <!-- YouTube -->
+    <string name="search_videos">Search recipe videos</string>
+    
+    <!-- Recipe Editing -->
+    <string name="edit_recipe">Edit Recipe</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="recipe_updated">Recipe updated successfully</string>
+    <string name="recipe_image_preview">Recipe Image Preview</string>
+    
+    <!-- Error Messages -->
+    <string name="internet_unavailable">Internet is unavailable. Cannot connect to the desired feature.</string>
+</resources>

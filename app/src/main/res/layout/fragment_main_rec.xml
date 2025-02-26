@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainRec"
+    android:background="@drawable/main_background"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="50dp">
+
+    <Button
+        android:id="@+id/button_search_rec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/search_recipes"
+        android:background="@drawable/button_background"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/button_myrec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/create_recipe"
+        android:background="@drawable/button_background"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/button_saved_recipes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/saved_recipes"
+        android:background="@drawable/button_background"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/button_youtube"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/youtube_videos"
+        android:background="@drawable/button_background"/>
+
+</LinearLayout>

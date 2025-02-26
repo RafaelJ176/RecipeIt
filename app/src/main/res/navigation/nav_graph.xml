@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainRec">
+
+    <fragment
+        android:id="@+id/mainRec"
+        android:name="il.rjana.recipeit.ui.MainRec"
+        android:label="fragment_main_rec"
+        tools:layout="@layout/fragment_main_rec">
+        <action
+            android:id="@+id/action_mainRec_to_search_Rec"
+            app:destination="@id/search_Rec"
+            app:enterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_mainRec_to_myrec"
+            app:destination="@id/myrec"
+            app:enterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_mainRec_to_youTubeVideosFragment"
+            app:destination="@id/youTubeVideosFragment"
+            app:enterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_mainRec_to_savedRecipesFragment"
+            app:destination="@id/savedRecipesFragment"
+            app:enterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/search_Rec"
+        android:name="il.rjana.recipeit.ui.Search_Rec"
+        android:label="fragment_search_rec"
+        tools:layout="@layout/fragment_search_rec">
+        <action
+            android:id="@+id/action_search_Rec_to_recipeDetailFragment"
+            app:destination="@id/recipeDetailFragment"
+            app:enterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/myrec"
+        android:name="il.rjana.recipeit.ui.Myrec"
+        android:label="fragment_myrec"
+        tools:layout="@layout/fragment_myrec">
+        <action
+            android:id="@+id/action_myrec_to_recipeDetailFragment"
+            app:destination="@id/recipeDetailFragment"
+            app:enterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_myrec_to_savedRecipesFragment"
+            app:destination="@id/savedRecipesFragment"
+            app:enterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/recipeDetailFragment"
+        android:name="il.rjana.recipeit.ui.RecipeDetailFragment"
+        android:label="fragment_recipe_detail"
+        tools:layout="@layout/fragment_recipe_detail">
+        <argument
+            android:name="recipeId"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/youTubeVideosFragment"
+        android:name="il.rjana.recipeit.ui.YouTubeVideosFragment"
+        android:label="fragment_youtube_videos"
+        tools:layout="@layout/fragment_youtube_videos" />
+        
+    <fragment
+        android:id="@+id/savedRecipesFragment"
+        android:name="il.rjana.recipeit.ui.SavedRecipesFragment"
+        android:label="fragment_saved_recipes"
+        tools:layout="@layout/fragment_saved_recipes">
+        <action
+            android:id="@+id/action_savedRecipesFragment_to_recipeDetailFragment"
+            app:destination="@id/recipeDetailFragment"
+            app:enterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_savedRecipesFragment_to_editRecipeFragment"
+            app:destination="@id/editRecipeFragment"
+            app:enterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+    
+    <fragment
+        android:id="@+id/editRecipeFragment"
+        android:name="il.rjana.recipeit.ui.EditRecipeFragment"
+        android:label="fragment_edit_recipe"
+        tools:layout="@layout/fragment_edit_recipe">
+        <argument
+            android:name="recipeId"
+            app:argType="integer" />
+    </fragment>
+</navigation>

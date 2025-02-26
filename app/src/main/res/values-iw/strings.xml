@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">מתכונים</string>
+    
+    <!-- Main Menu -->
+    <string name="search_recipes">חיפוש מתכונים</string>
+    <string name="create_recipe">יצירת מתכון</string>
+    <string name="saved_recipes">מתכונים שמורים</string>
+    <string name="youtube_videos">סרטוני יוטיוב</string>
+    
+    <!-- Recipe Creation -->
+    <string name="create_new_recipe">יצירת מתכון חדש</string>
+    <string name="recipe_title">שם המתכון</string>
+    <string name="recipe_category">קטגוריה</string>
+    <string name="recipe_area">מטבח (אזור)</string>
+    <string name="recipe_ingredients">מרכיבים</string>
+    <string name="recipe_instructions">הוראות הכנה</string>
+    <string name="add_image">הוספת תמונה</string>
+    <string name="save_recipe">שמירת מתכון</string>
+    <string name="title_required">שם המתכון הוא שדה חובה</string>
+    <string name="recipe_saved">המתכון נשמר בהצלחה</string>
+    <string name="title_invalid">שם המתכון יכול להכיל רק אותיות, מספרים ורווחים</string>
+    
+    <!-- Image Selection -->
+    <string name="add_recipe_image">הוספת תמונה למתכון</string>
+    <string name="take_photo">צילום תמונה</string>
+    <string name="choose_gallery">בחירה מהגלריה</string>
+    <string name="camera_permission_required">נדרשת הרשאת מצלמה לצילום תמונות</string>
+    <string name="storage_permission_required">נדרשת הרשאת אחסון לבחירת תמונות</string>
+    <string name="no_camera_app">אין אפליקציית מצלמה זמינה</string>
+    <string name="failed_load_image">טעינת התמונה נכשלה</string>
+    
+    <!-- Recipe Search -->
+    <string name="search">חיפוש</string>
+    <string name="search_hint">הזן שם מתכון</string>
+    <string name="no_recipes_found">לא נמצאו מתכונים</string>
+    <string name="location_suggestion">האם תרצה לראות מתכונים מהאזור שלך?</string>
+    <string name="yes">כן</string>
+    <string name="no">לא</string>
+    <string name="location_permission_required">נדרשת הרשאת מיקום למתכונים אזוריים</string>
+    <string name="filter_by">סינון לפי</string>
+    <string name="region">אזור</string>
+    <string name="category">קטגוריה</string>
+    <string name="ingredient">מרכיב</string>
+    <string name="select_ingredient">בחר מרכיב</string>
+    <string name="clear_filters">נקה סינון</string>
+    <string name="results">תוצאות</string>
+    <string name="all">הכל</string>
+    
+    <!-- Recipe Details -->
+    <string name="category_label">קטגוריה: %s</string>
+    <string name="area_label">אזור: %s</string>
+    <string name="ingredients_label">מרכיבים</string>
+    <string name="instructions_label">הוראות הכנה</string>
+    
+    <!-- Saved Recipes -->
+    <string name="my_favorite_recipes">המתכונים המועדפים שלי</string>
+    <string name="edit">עריכה</string>
+    <string name="delete">מחיקה</string>
+    <string name="confirm_delete">האם אתה בטוח שברצונך למחוק מתכון זה?</string>
+    <string name="cancel">ביטול</string>
+    <string name="recipe_deleted">המתכון נמחק</string>
+    
+    <!-- YouTube -->
+    <string name="search_videos">חיפוש סרטוני מתכונים</string>
+    
+    <!-- Recipe Editing -->
+    <string name="edit_recipe">עריכת מתכון</string>
+    <string name="save_changes">שמור שינויים</string>
+    <string name="recipe_updated">המתכון עודכן בהצלחה</string>
+    <string name="recipe_image_preview">תצוגה מקדימה של תמונת המתכון</string>
+    
+    <!-- Error Messages -->
+    <string name="internet_unavailable">אין חיבור לאינטרנט. לא ניתן להתחבר לתכונה המבוקשת.</string>
+</resources> 
