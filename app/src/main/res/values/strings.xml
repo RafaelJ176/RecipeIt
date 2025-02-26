@@ -74,4 +74,5 @@
     
     <!-- Error Messages -->
     <string name="internet_unavailable">Internet is unavailable. Cannot connect to the desired feature.</string>
+    <string name="cuisine_area">Cuisine (Area)</string>
 </resources>

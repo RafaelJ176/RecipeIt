@@ -44,7 +44,6 @@ public class RecipeViewModel extends AndroidViewModel {
         return favoriteRecipes;
     }
 
-    // New Method for Searching by Name
     public LiveData<List<RecipeEntity>> searchRecipesByName(String query) {
         return repository.searchRecipesByName(query);
     }
@@ -66,27 +65,22 @@ public class RecipeViewModel extends AndroidViewModel {
         return repository.searchRecipesByArea(area);
     }
 
-    // Search by Category
     public LiveData<List<RecipeEntity>> searchRecipesByCategory(String category) {
         return repository.searchRecipesByCategory(category);
     }
     
-    // Search by Ingredient
     public LiveData<List<RecipeEntity>> searchRecipesByIngredient(String ingredient) {
         return repository.searchRecipesByIngredient(ingredient);
     }
     
-    // Get all areas for spinner
     public LiveData<List<String>> getAllAreas() {
         return allAreas;
     }
     
-    // Get all categories for spinner
     public LiveData<List<String>> getAllCategories() {
         return allCategories;
     }
     
-    // Get all ingredients for spinner
     public LiveData<List<String>> getAllIngredients() {
         return allIngredients;
     }

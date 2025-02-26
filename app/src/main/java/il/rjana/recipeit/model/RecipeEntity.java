@@ -22,10 +22,9 @@ public class RecipeEntity {
         this.instructions = instructions;
         this.imageUrl = imageUrl;
         this.area = area;
-        this.isFavorite = false;  // Default value
+        this.isFavorite = false;
     }
 
-    // Default Constructor (Required for Room)
     public RecipeEntity() {}
 
     // Getters and Setters

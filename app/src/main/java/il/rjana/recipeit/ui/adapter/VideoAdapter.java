@@ -40,19 +40,16 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
         holder.titleTextView.setText(video.getTitle());
         holder.descriptionTextView.setText(video.getDescription());
 
-        // Load thumbnail
         Glide.with(holder.itemView.getContext())
                 .load(video.getThumbnailUrl())
                 .into(holder.thumbnailImageView);
 
-        // Handle expanded state
         final boolean isExpanded = position == expandedPosition;
         holder.videoWebView.setVisibility(isExpanded ? View.VISIBLE : View.GONE);
         holder.thumbnailImageView.setVisibility(isExpanded ? View.GONE : View.VISIBLE);
         holder.itemView.setActivated(isExpanded);
 
         if (isExpanded) {
-            // Load YouTube video in WebView
             String videoHtml = "<html><body>" +
                     "<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/" + 
                     video.getVideoId() + "?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>" +
@@ -61,9 +58,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
             holder.videoWebView.loadData(videoHtml, "text/html", "utf-8");
         }
 
-        // Set click listener
         holder.itemView.setOnClickListener(v -> {
-            // Toggle expanded state
             expandedPosition = isExpanded ? -1 : position;
             notifyDataSetChanged();
         });
@@ -91,7 +86,6 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
             descriptionTextView = itemView.findViewById(R.id.video_description);
             videoWebView = itemView.findViewById(R.id.video_web_view);
             
-            // Configure WebView
             if (videoWebView != null) {
                 videoWebView.getSettings().setJavaScriptEnabled(true);
                 videoWebView.getSettings().setPluginState(WebSettings.PluginState.ON);

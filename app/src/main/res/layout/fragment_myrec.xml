@@ -35,12 +35,11 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Create New Recipe"
+                        android:text="@string/create_new_recipe"
                         android:textSize="24sp"
                         android:textStyle="bold"
                         android:layout_marginBottom="16dp"/>
 
-                    <!-- Image Preview -->
                     <ImageView
                         android:id="@+id/recipe_image_preview"
                         android:layout_width="match_parent"
@@ -48,14 +47,14 @@
                         android:scaleType="centerCrop"
                         android:visibility="gone"
                         android:layout_marginBottom="8dp"
-                        android:contentDescription="Recipe Image Preview"/>
+                        android:contentDescription="@string/recipe_image_preview"/>
 
                     <!-- Add Image Button -->
                     <Button
                         android:id="@+id/add_image_button"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Add Image"
+                        android:text="@string/add_image"
                         android:background="@drawable/button_background"
                         android:layout_marginBottom="16dp"/>
 
@@ -69,7 +68,7 @@
                             android:id="@+id/recipe_title_input"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Recipe Title"/>
+                            android:hint="@string/recipe_title"/>
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -82,7 +81,7 @@
                             android:id="@+id/recipe_category_input"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Category"/>
+                            android:hint="@string/category"/>
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -95,7 +94,7 @@
                             android:id="@+id/recipe_area_input"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Cuisine (Area)"/>
+                            android:hint="@string/cuisine_area"/>
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -108,7 +107,7 @@
                             android:id="@+id/recipe_ingredients_input"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Ingredients"
+                            android:hint="@string/ingredient"
                             android:minLines="3"
                             android:gravity="top"/>
                     </com.google.android.material.textfield.TextInputLayout>
@@ -123,7 +122,7 @@
                             android:id="@+id/recipe_instructions_input"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Instructions"
+                            android:hint="@string/recipe_instructions"
                             android:minLines="3"
                             android:gravity="top"/>
                     </com.google.android.material.textfield.TextInputLayout>

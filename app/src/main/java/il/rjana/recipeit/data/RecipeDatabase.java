@@ -17,7 +17,6 @@ public abstract class RecipeDatabase extends RoomDatabase {
     static final Migration MIGRATION_1_2 = new Migration(1, 2) {
         @Override
         public void migrate(SupportSQLiteDatabase database) {
-            // Add the new 'area' column
             database.execSQL("ALTER TABLE recipe_table ADD COLUMN area TEXT");
         }
     };
@@ -25,7 +24,6 @@ public abstract class RecipeDatabase extends RoomDatabase {
     static final Migration MIGRATION_2_3 = new Migration(2, 3) {
         @Override
         public void migrate(SupportSQLiteDatabase database) {
-            // Add the new 'isFavorite' column with default value 0 (false)
             database.execSQL("ALTER TABLE recipe_table ADD COLUMN isFavorite INTEGER NOT NULL DEFAULT 0");
         }
     };

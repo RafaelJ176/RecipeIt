@@ -46,7 +46,6 @@ public class EditRecipeFragment extends Fragment {
     private int recipeId;
     private RecipeEntity currentRecipe;
     
-    // Activity result launchers for modern permission handling
     private ActivityResultLauncher<String> requestCameraPermissionLauncher;
     private ActivityResultLauncher<String> requestStoragePermissionLauncher;
     private ActivityResultLauncher<Intent> takePictureLauncher;
@@ -56,12 +55,10 @@ public class EditRecipeFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         
-        // Get recipe ID from arguments
         if (getArguments() != null) {
             recipeId = getArguments().getInt("recipeId", -1);
         }
         
-        // Initialize permission launchers
         requestCameraPermissionLauncher = registerForActivityResult(
             new ActivityResultContracts.RequestPermission(),
             isGranted -> {
@@ -84,7 +81,6 @@ public class EditRecipeFragment extends Fragment {
             }
         );
         
-        // Initialize activity result launchers
         takePictureLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
             result -> {
@@ -136,10 +132,8 @@ public class EditRecipeFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        // Initialize ViewModel
         recipeViewModel = new ViewModelProvider(this).get(RecipeViewModel.class);
 
-        // Initialize views
         titleInput = view.findViewById(R.id.recipe_title_input);
         categoryInput = view.findViewById(R.id.recipe_category_input);
         areaInput = view.findViewById(R.id.recipe_area_input);
@@ -149,7 +143,6 @@ public class EditRecipeFragment extends Fragment {
         Button addImageButton = view.findViewById(R.id.add_image_button);
         recipeImageView = view.findViewById(R.id.recipe_image_preview);
 
-        // Load recipe data if we have a valid ID
         if (recipeId != -1) {
             recipeViewModel.getRecipeById(recipeId).observe(getViewLifecycleOwner(), recipe -> {
                 if (recipe != null) {
@@ -159,10 +152,8 @@ public class EditRecipeFragment extends Fragment {
             });
         }
 
-        // Handle save button click
         saveButton.setOnClickListener(v -> updateRecipe());
         
-        // Handle add image button click
         addImageButton.setOnClickListener(v -> showImageSourceDialog());
     }
     
@@ -173,7 +164,6 @@ public class EditRecipeFragment extends Fragment {
         ingredientsInput.setText(recipe.getIngredients());
         instructionsInput.setText(recipe.getInstructions());
         
-        // Load image if available
         if (recipe.getImageUrl() != null && !recipe.getImageUrl().isEmpty()) {
             Glide.with(requireContext())
                     .load(recipe.getImageUrl())
@@ -266,28 +256,24 @@ public class EditRecipeFragment extends Fragment {
         String ingredients = ingredientsInput.getText() != null ? ingredientsInput.getText().toString().trim() : "";
         String instructions = instructionsInput.getText() != null ? instructionsInput.getText().toString().trim() : "";
 
-        // Validate title is not empty
         if (title.isEmpty()) {
             titleInput.setError(getString(R.string.title_required));
             Toast.makeText(getContext(), R.string.title_required, Toast.LENGTH_SHORT).show();
             return;
         }
         
-        // Validate title contains only letters, numbers, and spaces
         if (!title.matches("^[a-zA-Z0-9 ]+$")) {
             titleInput.setError(getString(R.string.title_invalid));
             Toast.makeText(getContext(), R.string.title_invalid, Toast.LENGTH_SHORT).show();
             return;
         }
 
-        // Update recipe fields
         currentRecipe.setTitle(title);
         currentRecipe.setCategory(category);
         currentRecipe.setArea(area);
         currentRecipe.setIngredients(ingredients);
         currentRecipe.setInstructions(instructions);
         
-        // Update image if changed
         if (currentPhotoPath != null && !currentPhotoPath.isEmpty()) {
             if (!currentPhotoPath.startsWith("file://")) {
                 currentRecipe.setImageUrl("file://" + currentPhotoPath);
@@ -296,12 +282,10 @@ public class EditRecipeFragment extends Fragment {
             }
         }
         
-        // Save changes
         recipeViewModel.update(currentRecipe);
 
         Toast.makeText(getContext(), R.string.recipe_updated, Toast.LENGTH_SHORT).show();
         
-        // Navigate back to saved recipes
         Navigation.findNavController(requireView()).navigateUp();
     }
 } 

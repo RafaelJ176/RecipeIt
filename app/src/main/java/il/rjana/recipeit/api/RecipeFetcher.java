@@ -45,7 +45,6 @@ public class RecipeFetcher {
                             String instructions = meal.path("strInstructions").asText();
                             String imageUrl = meal.path("strMealThumb").asText();
 
-                            // Build ingredients list
                             StringBuilder ingredients = new StringBuilder();
                             for (int i = 1; i <= 20; i++) {
                                 String ingredient = meal.path("strIngredient" + i).asText();
@@ -59,14 +58,13 @@ public class RecipeFetcher {
                                 }
                             }
 
-                            // Save to Room Database
                             RecipeEntity recipeEntity = new RecipeEntity(
                                 title,
                                 ingredients.toString(),
-                                category,  // Using category instead of servings
+                                category,
                                 instructions,
                                 imageUrl,
-                                area      // Adding area as a new field
+                                area
                             );
                             viewModel.insert(recipeEntity);
 

@@ -49,23 +49,15 @@ public class YouTubeVideosFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        // Initialize ViewModel
         recipeViewModel = new ViewModelProvider(this).get(RecipeViewModel.class);
-
-        // Initialize Volley RequestQueue
         requestQueue = Volley.newRequestQueue(requireContext());
-
-        // Initialize views
         recyclerView = view.findViewById(R.id.videos_recycler_view);
         searchInput = view.findViewById(R.id.video_search_input);
         searchButton = view.findViewById(R.id.video_search_button);
-
-        // Setup RecyclerView
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         adapter = new VideoAdapter(new ArrayList<>());
         recyclerView.setAdapter(adapter);
 
-        // Set search button click listener
         searchButton.setOnClickListener(v -> {
             String query = searchInput.getText().toString().trim();
             if (!query.isEmpty()) {
@@ -75,7 +67,6 @@ public class YouTubeVideosFragment extends Fragment {
             }
         });
 
-        // Load popular recipe videos by default
         searchYouTubeVideos("popular recipes");
     }
 

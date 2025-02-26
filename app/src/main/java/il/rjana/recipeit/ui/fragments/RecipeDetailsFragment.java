@@ -38,27 +38,22 @@ public class RecipeDetailsFragment extends Fragment {
 
         recipeViewModel = new ViewModelProvider(this).get(RecipeViewModel.class);
 
-        // Get views
         ImageView recipeImage = view.findViewById(R.id.recipe_image);
         TextView titleText = view.findViewById(R.id.recipe_title);
         TextView categoryAreaText = view.findViewById(R.id.recipe_category_area);
         TextView ingredientsText = view.findViewById(R.id.recipe_ingredients);
         TextView instructionsText = view.findViewById(R.id.recipe_instructions);
 
-        // Get recipe ID from arguments
         if (getArguments() != null) {
             int recipeId = getArguments().getInt(ARG_RECIPE_ID);
             
-            // Observe recipe details
             recipeViewModel.getRecipeById(recipeId).observe(getViewLifecycleOwner(), recipe -> {
                 if (recipe != null) {
-                    // Set recipe details
                     titleText.setText(recipe.getTitle());
                     categoryAreaText.setText(String.format("%s | %s", recipe.getCategory(), recipe.getArea()));
                     ingredientsText.setText(recipe.getIngredients());
                     instructionsText.setText(recipe.getInstructions());
 
-                    // Load image
                     if (recipe.getImageUrl() != null && !recipe.getImageUrl().isEmpty()) {
                         Glide.with(this)
                                 .load(recipe.getImageUrl())

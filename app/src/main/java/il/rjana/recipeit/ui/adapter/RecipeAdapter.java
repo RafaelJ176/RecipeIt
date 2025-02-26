@@ -23,12 +23,10 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
     private OnItemClickListener listener;
     private OnEditClickListener editListener;
 
-    // Interface for click events
     public interface OnItemClickListener {
         void onItemClick(RecipeEntity recipe);
     }
     
-    // Interface for edit button click events
     public interface OnEditClickListener {
         void onEditClick(RecipeEntity recipe);
     }
@@ -59,32 +57,26 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
         RecipeEntity currentRecipe = recipes.get(position);
         holder.titleTextView.setText(currentRecipe.getTitle());
         
-        // Display category and area
         String categoryAndArea = currentRecipe.getCategory() + " | " + currentRecipe.getArea();
         holder.categoryAreaTextView.setText(categoryAndArea);
         
-        // Load image using Glide
         if (currentRecipe.getImageUrl() != null && !currentRecipe.getImageUrl().isEmpty()) {
             Glide.with(holder.itemView.getContext())
                     .load(currentRecipe.getImageUrl())
                     .into(holder.recipeImageView);
         }
 
-        // Set favorite button state
         holder.favoriteButton.setImageResource(
             currentRecipe.isFavorite() ? R.drawable.ic_favorite_filled : R.drawable.ic_favorite_border
         );
 
-        // Handle favorite button click
         holder.favoriteButton.setOnClickListener(v -> {
             viewModel.toggleFavorite(currentRecipe);
         });
         
-        // Show/hide edit button based on whether it's a favorite recipe
         if (currentRecipe.isFavorite() && holder.editButton != null) {
             holder.editButton.setVisibility(View.VISIBLE);
             
-            // Handle edit button click
             holder.editButton.setOnClickListener(v -> {
                 if (editListener != null) {
                     editListener.onEditClick(currentRecipe);
@@ -94,7 +86,6 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
             holder.editButton.setVisibility(View.GONE);
         }
 
-        // Set click listener
         holder.itemView.setOnClickListener(v -> {
             if (listener != null) {
                 listener.onItemClick(currentRecipe);
