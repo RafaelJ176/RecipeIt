@@ -13,18 +13,15 @@ import il.rjana.recipeit.model.RecipeEntity;
 @Dao
 public interface RecipeDao {
 
-    // Correctly Annotated Insert Method
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insert(RecipeEntity recipe);
 
     @Update
     void update(RecipeEntity recipe);
 
-    // Query to Search Recipes by Name
     @Query("SELECT * FROM recipe_table WHERE title LIKE '%' || :query || '%' GROUP BY title")
     LiveData<List<RecipeEntity>> searchRecipesByName(String query);
 
-    // Query to Get All Recipes
     @Query("SELECT * FROM recipe_table GROUP BY title ORDER BY title ASC")
     LiveData<List<RecipeEntity>> getAllRecipes();
 
@@ -33,9 +30,6 @@ public interface RecipeDao {
 
     @Query("SELECT * FROM recipe_table WHERE isFavorite = 1")
     LiveData<List<RecipeEntity>> getFavoriteRecipes();
-
-    @Query("UPDATE recipe_table SET isFavorite = :isFavorite WHERE id = :id")
-    void updateFavoriteStatus(int id, boolean isFavorite);
 
     @Delete
     void delete(RecipeEntity recipe);

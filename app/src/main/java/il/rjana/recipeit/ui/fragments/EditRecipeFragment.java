@@ -180,10 +180,8 @@ public class EditRecipeFragment extends Fragment {
             .setTitle(R.string.add_recipe_image)
             .setItems(options, (dialog, which) -> {
                 if (which == 0) {
-                    // Take photo with camera
                     checkCameraPermission();
                 } else {
-                    // Choose from gallery
                     checkStoragePermission();
                 }
             })

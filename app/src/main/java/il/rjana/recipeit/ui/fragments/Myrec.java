@@ -42,14 +42,7 @@ import java.util.UUID;
 
 public class Myrec extends Fragment {
 
-
-
-    private static final int REQUEST_IMAGE_CAPTURE = 1;
-    private static final int REQUEST_PICK_IMAGE = 2;
-    private static final int PERMISSION_REQUEST_CAMERA = 100;
-    private static final int PERMISSION_REQUEST_STORAGE = 101;
-
-    private RecipeViewModel recipeViewModel;
+        private RecipeViewModel recipeViewModel;
     private TextInputEditText titleInput, categoryInput, areaInput, ingredientsInput, instructionsInput;
     private RecipeAdapter adapter;
     private ImageView recipeImageView;
@@ -61,14 +54,6 @@ public class Myrec extends Fragment {
     private ActivityResultLauncher<Intent> pickImageLauncher;
 
     public Myrec() {
-    }
-
-
-    public static Myrec newInstance(String param1, String param2) {
-        Myrec fragment = new Myrec();
-        Bundle args = new Bundle();
-        fragment.setArguments(args);
-        return fragment;
     }
 
     @Override

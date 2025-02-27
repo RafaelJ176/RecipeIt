@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:scaleType="centerCrop"
-            tools:src="@drawable/ic_launcher_background"
+            tools:src="@drawable/main_background"
             android:contentDescription="Video Thumbnail" />
 
         <WebView
@@ -42,7 +42,7 @@
                 android:textStyle="bold"
                 android:maxLines="2"
                 android:ellipsize="end"
-                tools:text="How to Make Perfect Chocolate Chip Cookies" />
+                tools:text="Video Title" />
 
             <TextView
                 android:id="@+id/video_description"
@@ -51,7 +51,7 @@
                 android:layout_marginTop="8dp"
                 android:maxLines="3"
                 android:ellipsize="end"
-                tools:text="Learn how to make the perfect chocolate chip cookies with this easy recipe. These cookies are crispy on the outside and chewy on the inside." />
+                tools:text="Video Description" />
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView> 

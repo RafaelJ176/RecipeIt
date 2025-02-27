@@ -496,7 +496,6 @@ public class Search_Rec extends Fragment {
     
     @Override
     public void onDestroyView() {
-        // Clean up observer when view is destroyed
         if (currentLiveData != null && currentObserver != null) {
             currentLiveData.removeObserver(currentObserver);
         }

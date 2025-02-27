@@ -18,13 +18,6 @@ public class RecipeDetailsFragment extends Fragment {
     private static final String ARG_RECIPE_ID = "recipe_id";
     private RecipeViewModel recipeViewModel;
 
-    public static RecipeDetailsFragment newInstance(int recipeId) {
-        RecipeDetailsFragment fragment = new RecipeDetailsFragment();
-        Bundle args = new Bundle();
-        args.putInt(ARG_RECIPE_ID, recipeId);
-        fragment.setArguments(args);
-        return fragment;
-    }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,

@@ -88,7 +88,7 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.VideoViewHol
             
             if (videoWebView != null) {
                 videoWebView.getSettings().setJavaScriptEnabled(true);
-                videoWebView.getSettings().setPluginState(WebSettings.PluginState.ON);
+                videoWebView.getSettings();
                 videoWebView.setWebChromeClient(new WebChromeClient());
             }
         }

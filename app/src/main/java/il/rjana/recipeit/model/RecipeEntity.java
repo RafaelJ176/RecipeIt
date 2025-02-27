@@ -27,7 +27,6 @@ public class RecipeEntity {
 
     public RecipeEntity() {}
 
-    // Getters and Setters
     public int getId() {
         return id;
     }
